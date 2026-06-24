@@ -1,6 +1,15 @@
 /* ===== GERAL ===== */
 
 /* Fundo geral de papel de festa */
+.stAppHeader,
+.stBottom {
+  background: #fff4dd;
+}
+
+.stBottom > div {
+  background: transparent;
+}
+
 .stApp {
   background: #fff4dd;
   color: #22150a;
@@ -108,8 +117,7 @@ div[role="radiogroup"] p {
   background: transparent !important;
 }
 
-.st-key-InputOpenai .stTextInput > [data-testid="stTextInputRootElement"] > div > input,
-.st-key-InputOpenai .stTextInput > [data-testid="stTextInputRootElement"] > div > button {
+.st-key-InputOpenai .stTextInput > [data-testid="stTextInputRootElement"] > div > input {
   color: #22150a !important;
 }
 
@@ -129,16 +137,31 @@ div[role="radiogroup"] p {
 @keyframes pisca-cursor {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }
+.st-key-InputOpenai .stTextInput > [data-testid="stTextInputRootElement"] > div > button {
+  color: #8b4513 !important;
 }
 
 /* ===== CHAT ===== */
-.stChatMessage {
-  background: #fffdf6;
-  border-left: 10px solid #c62828;
-  border-radius: 15px;
-  padding: 15px;
-  margin-bottom: 15px;
+
+.st-key-InputModel > div > div {
+  background: #fffdf6 !important;
+  border: 3px solid #8b4513;
+  border-radius: 10px;
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.st-key-InputModel:focus-within > div > div,
+.st-key-InputModel:active > div > div {
+  border: 3px solid #6a3310;
+}
+
+.st-key-InputModel textarea {
+  background: #fffdf6 !important;
+  color: #22150a !important;
+}
+
+.st-key-InputModel button:not(:disabled) {
+  background: #8b4513 !important;
 }
 
 /* ===== BOTÕES ===== */

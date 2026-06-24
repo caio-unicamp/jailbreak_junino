@@ -152,7 +152,7 @@ if "nivel_anterior" not in st.session_state or st.session_state.nivel_anterior !
     st.session_state.fim_do_tempo = 0
 
 
-prompt = st.chat_input("Tente enganar o modelo, cumpadi(cumadi)...")
+prompt = st.chat_input("Tente enganar o modelo, cumpadi(cumadi)...", key="InputModel")
 if prompt:
     if not api_key_openai:
         st.error("🚨 Coloque a chave da OpenAI na barra lateral primeiro, sô!")
