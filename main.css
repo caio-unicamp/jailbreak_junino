@@ -57,10 +57,6 @@ p {
   position: relative;
 }
 
-/* RESOLUÇÃO DO TODO: Varal de Bandeirinhas 
-   O uso de aspas simples com letter-spacing cria um "barbante" visual 
-   conectando as bandeirinhas (representadas por triângulos e emojis juninos)
-*/
 .titulo-cadeia::before {
   content: "〰️🚩〰️🌽〰️🚩〰️🔥〰️🚩〰️";
   display: block;
