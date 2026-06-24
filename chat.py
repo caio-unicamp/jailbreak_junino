@@ -4,126 +4,17 @@ import streamlit as st
 import streamlit.components.v1 as components
 from openai import OpenAI
 
+
+def local_css(file: str):
+    with open(file) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
+# Load main css
+local_css("main.css")
+
 # CONFIGURAÇÃO DA PÁGINA E TEMA JUNINO
 st.set_page_config(page_title="Cadeia do Jailbreak", page_icon="🌽", layout="centered")
-
-# Criar um load file para usar file.css
-
-# CSS de Arraiá / Cadeia
-st.markdown(
-    """
-    <style>
-
-    /* ===== GERAL ===== */
-
-    /* Fundo geral de papel de festa */
-    .stApp {
-        background: #FFF4DD;
-        color: #22150A;
-    }
-
-    /* Deploy button */
-    .stAppDeployButton {
-            visibility: hidden;
-    }
-
-    /* Títulos */
-    h1, h2, h3 {
-      font-family: "Trebuchet MS", sans-serif;
-      color: #5D2E0D !important;
-      font-weight: 900;
-    }
-
-    p {
-      font-family: "Trebuchet MS", sans-serif;
-    }
-
-    /* FORÇA A COR DO TEXTO A FICAR ESCURA INDEPENDENTE DO MODO DO PC */
-    .stMarkdown p, .stChatMessage p {
-        color: #2b1d0e !important;
-        font-size: 16px;
-    }
-
-    /* ===== PLACA DA CADEIA ===== */
-    .titulo-cadeia {
-        background: linear-gradient(
-            180deg,
-            #7B3F00,
-            #4A2408
-        );
-        color:white;
-        padding: 20px;
-        border-radius: 15px;
-        border: 6px solid #D7B97A;
-        box-shadow:
-            0 8px 0 #32160,
-            0 12px 20px rgba(0,0,0,0.4);
-        text-align:center;
-        margin-bottom: 30px;
-        position:relative;
-    }
-
-    /* TOOD: Melhorar essas bandeirinhas para ficar mais parecido com bandeiras, pois estão lineares
-
-    /* Bandeirinhas no topo */
-    .titulo-cadeia::before {
-        content:
-        "🔺🔵🟢🟡🔴 🔺🔵🟢🟡🔴";
-        display:block;
-        font-size: 25px;
-        margin-bottom:10px;
-    }
-
-    .titulo-cadeia h1,
-    .titulo-cadeia p {
-        color:white !important;
-    }
-
-    /* ===== SIDEBAR ===== */
-    [data-testid="stSidebar"] {
-        background:
-            linear-gradient(
-            90deg,
-            #8B4513,
-            #6A3310
-            );
-
-        border-right:
-            8px dashed #FFB300;
-    }
-
-    /* Textos da sidebar */
-    [data-testid="stSidebar"] * {
-        color: #FFF8E8 !important;
-    }
-
-    /* Rádio de níveis */
-    div[role="radiogroup"] {
-        background:#FFF5E0;
-        padding:10px;
-        border-radius:10px;
-        border:3px dashed #C62828;
-    }
-
-    div[role="radiogroup"] p {
-       color: black !important
-    }
-
-    /* ===== CHAT ===== */
-    .stChatMessage {
-        background: #FFFDF6;
-        border-left:
-            10px solid #C62828;
-        border-radius: 15px;
-        padding: 15px;
-        margin-bottom: 15px;
-        box-shadow:
-            3px 4px 8px rgba(0,0,0,0.2);
-    }
-    </style>
-""",
-    unsafe_allow_html=True,
-)
 
 st.markdown(
     '<div class="titulo-cadeia"><h1>🔥 JAILBREAK JUNINO 🔥</h1><p>Fugir da prisão nunca foi tão tecnológico, sô!</p></div>',
