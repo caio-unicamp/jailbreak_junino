@@ -22,11 +22,20 @@ st.markdown(
         color: #22150A;
     }
 
+    /* Deploy button */
+    .stAppDeployButton {
+            visibility: hidden;
+    }
+
     /* Títulos */
-        h1, h2, h3 {
-          font-family: "Trebuchet MS", sans-serif;
-          color: #5D2E0D !important;
-          font-weight: 900;
+    h1, h2, h3 {
+      font-family: "Trebuchet MS", sans-serif;
+      color: #5D2E0D !important;
+      font-weight: 900;
+    }
+
+    p {
+      font-family: "Trebuchet MS", sans-serif;
     }
 
     /* FORÇA A COR DO TEXTO A FICAR ESCURA INDEPENDENTE DO MODO DO PC */
@@ -35,7 +44,6 @@ st.markdown(
         font-size: 16px;
     }
 
-
     /* ===== PLACA DA CADEIA ===== */
     .titulo-cadeia {
         background: linear-gradient(
@@ -43,20 +51,15 @@ st.markdown(
             #7B3F00,
             #4A2408
         );
-
         color:white;
         padding: 20px;
         border-radius: 15px;
-
         border: 6px solid #D7B97A;
-
         box-shadow:
             0 8px 0 #32160,
             0 12px 20px rgba(0,0,0,0.4);
-
         text-align:center;
         margin-bottom: 30px;
-
         position:relative;
     }
 
@@ -66,33 +69,56 @@ st.markdown(
     .titulo-cadeia::before {
         content:
         "🔺🔵🟢🟡🔴 🔺🔵🟢🟡🔴";
-
         display:block;
-
         font-size: 25px;
-
         margin-bottom:10px;
     }
-
 
     .titulo-cadeia h1,
     .titulo-cadeia p {
         color:white !important;
     }
 
-    .stChatMessage {
-        background-color: #ffffff;
-        border: 2px solid #d2691e;
-        border-radius: 10px;
-        padding: 10px;
-    }
+    /* ===== SIDEBAR ===== */
     [data-testid="stSidebar"] {
-        background-color: #e6c280;
-        border-right: 3px dashed #8b4513;
+        background:
+            linear-gradient(
+            90deg,
+            #8B4513,
+            #6A3310
+            );
+
+        border-right:
+            8px dashed #FFB300;
     }
 
-    .stAppDeployButton {
-        visibility: hidden;
+    /* Textos da sidebar */
+    [data-testid="stSidebar"] * {
+        color: #FFF8E8 !important;
+    }
+
+    /* Rádio de níveis */
+    div[role="radiogroup"] {
+        background:#FFF5E0;
+        padding:10px;
+        border-radius:10px;
+        border:3px dashed #C62828;
+    }
+
+    div[role="radiogroup"] p {
+       color: black !important
+    }
+
+    /* ===== CHAT ===== */
+    .stChatMessage {
+        background: #FFFDF6;
+        border-left:
+            10px solid #C62828;
+        border-radius: 15px;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow:
+            3px 4px 8px rgba(0,0,0,0.2);
     }
     </style>
 """,
