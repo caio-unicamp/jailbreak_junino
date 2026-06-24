@@ -39,7 +39,7 @@ p {
   border-radius: 15px;
   border: 6px solid #d7b97a;
   box-shadow:
-    0 8px 0 #32160,
+    0 8px 0 #321607,
     0 12px 20px rgba(0, 0, 0, 0.4);
   text-align: center;
   margin-bottom: 30px;
@@ -93,4 +93,18 @@ div[role="radiogroup"] p {
   padding: 15px;
   margin-bottom: 15px;
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.relogio {
+  margin-top: 15px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  font-weight: bold;
+  color: #8b4513 !important;
+  background-color: #fcecd4;
+  padding: 6px;
+  border-radius: 8px;
+  border: 2px solid #d2691e;
+  text-align: center;
+  width: 100%;
 }

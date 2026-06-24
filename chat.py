@@ -80,15 +80,10 @@ with st.sidebar:
                     background-color: transparent;
                     margin: 0; display: flex; align-items: center; height: 70px;
                 }}
-                #relogio {{
-                    font-family: 'Courier New', Courier, monospace; font-size: 18px; font-weight: bold;
-                    color: #8b4513; background-color: #fcecd4; padding: 6px; border-radius: 8px;
-                    border: 2px solid #d2691e; text-align: center; width: 100%;
-                }}
             </style>
             </head>
             <body>
-                <div id="relogio">⏳ Calculando...</div>
+                <div id="relogio" class="relogio">⏳ Calculando...</div>
                 <script>
                     var countDownDate = {st.session_state.fim_do_tempo} * 1000;
                     var x = setInterval(function() {{
@@ -116,7 +111,7 @@ with st.sidebar:
             # Mostra o tempo estático antes de começar
             minutos = config_atual["tempo_segundos"] // 60
             st.markdown(
-                f"<div style=\"margin-top: 15px; font-family: 'Courier New', Courier, monospace; font-size: 18px; font-weight: bold; color: #8b4513; background-color: #fcecd4; padding: 6px; border-radius: 8px; border: 2px solid #d2691e; text-align: center;\">⏳ {minutos}:00</div>",
+                f"<div class='relogio' \">⏳ {minutos}:00</div>",
                 unsafe_allow_html=True,
             )
 
