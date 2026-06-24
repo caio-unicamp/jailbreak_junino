@@ -24,6 +24,24 @@ p {
   font-family: "Trebuchet MS", "Courier New", Courier, monospace;
 }
 
+/* FORÇA A COR DO TEXTO A FICAR ESCURA INDEPENDENTE DO MODO DO PC
+*/
+.stMarkdown p,
+.stChatMessage p,
+.stMarkdown ul,
+.stChatMessage ul,
+.stMarkdown ol,
+.stChatMessage ol,
+.stMarkdown li,
+.stChatMessage li,
+.stMarkdown strong,
+.stChatMessage strong,
+.stMarkdown span,
+.stChatMessage span {
+  color: #2b1d0e !important;
+  font-size: 16px;
+}
+
 /* ===== PLACA DA CADEIA ===== */
 .titulo-cadeia {
   background: linear-gradient(180deg, #7b3f00, #4a2408);
