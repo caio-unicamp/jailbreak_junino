@@ -114,8 +114,10 @@ with st.sidebar:
 
     st.markdown("---")
     st.subheader("🔑 Chave API OpenAI")
-    api_key_openai = st.text_input("OpenAI API Key:", type="password")
-    
+    api_key_openai = st.text_input(
+        "OpenAI API Key:", type="password", key="InputOpenai"
+    )
+
     if st.button("🧹 Limpar Chat"):
         st.session_state.messages = [
             {"role": "system", "content": config_atual["system_prompt"]}
