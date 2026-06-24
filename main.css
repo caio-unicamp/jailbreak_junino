@@ -1,6 +1,15 @@
 /* ===== GERAL ===== */
 
 /* Fundo geral de papel de festa */
+.stAppHeader,
+.stBottom {
+  background: #fff4dd;
+}
+
+.stBottom > div {
+  background: transparent;
+}
+
 .stApp {
   background: #fff4dd;
   color: #22150a;
@@ -22,24 +31,6 @@ h3 {
 
 p {
   font-family: "Trebuchet MS", "Courier New", Courier, monospace;
-}
-
-/* FORÇA A COR DO TEXTO A FICAR ESCURA INDEPENDENTE DO MODO DO PC
-*/
-.stMarkdown p,
-.stChatMessage p,
-.stMarkdown ul,
-.stChatMessage ul,
-.stMarkdown ol,
-.stChatMessage ol,
-.stMarkdown li,
-.stChatMessage li,
-.stMarkdown strong,
-.stChatMessage strong,
-.stMarkdown span,
-.stChatMessage span {
-  color: #2b1d0e !important;
-  font-size: 16px;
 }
 
 /* ===== PLACA DA CADEIA ===== */
@@ -108,15 +99,17 @@ div[role="radiogroup"] p {
   background: transparent !important;
 }
 
-.st-key-InputOpenai .stTextInput > [data-testid="stTextInputRootElement"] > div > input,
-.st-key-InputOpenai .stTextInput > [data-testid="stTextInputRootElement"] > div > button {
+.st-key-InputOpenai .stTextInput > [data-testid="stTextInputRootElement"] > div > input {
   color: #22150a !important;
 }
 
-/* Quando o campo é selecionado (focado) */
 .st-key-InputOpenai .stTextInput > [data-testid="stTextInputRootElement"]:focus-within {
   border-color: #ff9900 !important;
   box-shadow: 0 0 10px rgba(255, 153, 0, 0.5) !important;
+}
+
+.st-key-InputOpenai .stTextInput > [data-testid="stTextInputRootElement"] > div > button {
+  color: #7b4513 !important;
 }
 
 .st-key-InputOpenai .stTextInput input:focus {
@@ -127,18 +120,36 @@ div[role="radiogroup"] p {
 
 /* Animação para garantir o efeito visual de pulsação do foco */
 @keyframes pisca-cursor {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }
 
 /* ===== CHAT ===== */
-.stChatMessage {
-  background: #fffdf6;
-  border-left: 10px solid #c62828;
-  border-radius: 15px;
-  padding: 15px;
-  margin-bottom: 15px;
+
+.st-key-InputModel > div > div {
+  background: #fffdf6 !important;
+  border: 3px solid #8b4513;
+  border-radius: 10px;
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.st-key-InputModel:focus-within > div > div,
+.st-key-InputModel:active > div > div {
+  border: 3px solid #6a3310;
+}
+
+.st-key-InputModel textarea {
+  background: #fffdf6 !important;
+  color: #22150a !important;
+}
+
+.st-key-InputModel button:not(:disabled) {
+  background: #8b4513 !important;
 }
 
 /* ===== BOTÕES ===== */
